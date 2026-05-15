@@ -1,0 +1,14 @@
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Archives / old team folders (local only)
+_archive/
+
