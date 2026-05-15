@@ -123,7 +123,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284656,
     "emergencyLevel": "Immediate",
     "requirements": [1, 1, 1, 1, 1],
-    "offset": 19205,
+    "offset": 19205*2.5,
     "description": "Multi-vehicle collision involving hazardous materials, with injuries reported"
     },
 
@@ -133,7 +133,7 @@ const emergencies: Emergency[] = [
       "emergencyId": 49284656,
       "emergencyLevel": "Immediate",
       "requirements": [1, 1, 1, 1, 1],
-      "offset": 21205,
+      "offset": 21205*2.5,
       "description": "Multi-vehicle collision involving hazardous materials, with injuries reported"
       },
 
@@ -143,7 +143,7 @@ const emergencies: Emergency[] = [
         "emergencyId": 49284656,
         "emergencyLevel": "Immediate",
         "requirements": [1, 1, 1, 1, 1],
-        "offset": 24205,
+        "offset": 24205*2.5,
         "description": "Multi-vehicle collision involving hazardous materials, with injuries reported"
         },
         {
@@ -152,7 +152,7 @@ const emergencies: Emergency[] = [
           "emergencyId": 49284656,
           "emergencyLevel": "Immediate",
           "requirements": [1, 1, 1, 1, 1],
-          "offset": 23205,
+          "offset": 23205*2.5,
           "description": "Multi-vehicle collision involving hazardous materials, with injuries reported"
           },
     
@@ -162,7 +162,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284657,
     "emergencyLevel": "Non-Urgent",
     "requirements": [0, 0, 0, 0, 1],
-    "offset": 16500,
+    "offset": 16500*2.5,
     "description": "Controlled burn of large fallen tree blocking secondary road"
     },
     
@@ -182,7 +182,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284659,
     "emergencyLevel": "Routine",
     "requirements": [0, 1, 0, 0, 0],
-    "offset": 17300,
+    "offset": 17300*2.5,
     "description": "Elderly man with dementia wandered away from home near Fremantle"
     },
     
@@ -192,7 +192,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284660,
     "emergencyLevel": "Urgent",
     "requirements": [1, 0, 0, 0, 0],
-    "offset": 12200,
+    "offset": 12200*2.5,
     "description": "Armed robbery at a jewelry store in Rockingham, suspects are still at large"
     },
     
@@ -202,7 +202,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284661,
     "emergencyLevel": "Routine",
     "requirements": [0, 1, 0, 0, 0],
-    "offset": 15200,
+    "offset": 15200*2.5,
     "description": "Minor road accident in Victoria Park, traffic direction needed"
     },
     
@@ -212,7 +212,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284663,
     "emergencyLevel": "Non-Urgent",
     "requirements": [0, 0, 0, 0, 1],
-    "offset": 11400,
+    "offset": 11400*2.5,
     "description": "Cat stuck in tree in Highgate, owner requesting assistance"
     },
     
@@ -222,7 +222,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284664,
     "emergencyLevel": "Urgent",
     "requirements": [1, 0, 0, 0, 0],
-    "offset": 14000,
+    "offset": 14000*2.5,
     "description": "Bank heist in Fremantle, multiple hostages involved"
     },
     
@@ -242,7 +242,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284667,
     "emergencyLevel": "Routine",
     "requirements": [0, 1, 0, 0, 0],
-    "offset": 18300,
+    "offset": 18300*2.5,
     "description": "Stranded kite surfer off coast near Scarborough, needs retrieval"
     },
     
@@ -252,7 +252,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284668,
     "emergencyLevel": "Immediate",
     "requirements": [0, 0, 0, 0, 1],
-    "offset": 17000,
+    "offset": 17000*2.5,
     "description": "Multiple casualties in a nightclub fire in Perth CBD, urgent medical response required"
     },
     
@@ -262,7 +262,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284670,
     "emergencyLevel": "Urgent",
     "requirements": [1, 0, 0, 0, 0],
-    "offset": 16450,
+    "offset": 16450*2.5,
     "description": "Break-in at an electronics warehouse in Osborne Park, suspects still inside"
     },
     
@@ -272,7 +272,7 @@ const emergencies: Emergency[] = [
     "emergencyId": 49284672,
     "emergencyLevel": "Urgent",
     "requirements": [1, 0, 0, 0, 0],
-    "offset": 15450,
+    "offset": 15450*2.5,
     "description": "Suspicious vehicle with possible explosives parked outside a government building in Joondalup"
     }
 ];
@@ -394,7 +394,11 @@ const updateResources = async (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload: any
 ): Promise<void> => {
+<<<<<<< Updated upstream
   const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/optimise`, {
+=======
+  const response = await fetch("http://127.0.0.1:8000/optimise", {
+>>>>>>> Stashed changes
     method: "POST",
     body: JSON.stringify(payload),
     headers: {
